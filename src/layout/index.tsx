@@ -6,7 +6,7 @@ import FooterIndex from "./footer";
 import { Layout } from "antd";
 import { Outlet } from "react-router-dom";
 const { Header, Sider, Footer, Content } = Layout;
-export default function LayoutIndex() {
+const  LayoutIndex = function() {
   // 获取header store里的值
   const headerStore = useSelector((state: any) => {
     return state.headerReducer;
@@ -42,3 +42,4 @@ export default function LayoutIndex() {
     </Layout>
   );
 }
+export default LayoutIndex
