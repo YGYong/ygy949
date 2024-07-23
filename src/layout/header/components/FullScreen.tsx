@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FullscreenOutlined, FullscreenExitOutlined } from "@ant-design/icons";
 
 export default function ScreenIcon() {

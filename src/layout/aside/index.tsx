@@ -1,4 +1,4 @@
-import React, { useState, useEffect, startTransition } from "react";
+import { useState, useEffect, startTransition } from "react";
 import "./index.less";
 import router from "@/router";
 import { useNavigate, useLocation } from "react-router-dom";

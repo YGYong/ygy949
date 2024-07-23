@@ -20,8 +20,13 @@
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    // "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    /* ygyong */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"] // This maps all imports starting with "@" to the "src" folder
+    },
   },
   "include": ["src"],
   // "exclude": ["node_modules", "dist", "**/*.js"]

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import avatar from "@/assets/images/header/avatar.jpg";
 import { Avatar, Popover, message, Popconfirm } from "antd";
@@ -15,7 +15,7 @@ export default function AvatarIcon() {
     }
   };
   // 退出当前系统
-  const confirm: PopconfirmProps["onConfirm"] = (e) => {
+  const confirm: PopconfirmProps["onConfirm"] = () => {
     message.info("退出登录!");
     navigate("/");
   };
