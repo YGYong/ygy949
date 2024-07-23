@@ -1,0 +1,1 @@
+System.register(["./index-legacy-B0CsppAN.js"],(function(e,t){"use strict";var s;return{setters:[function(e){s=e.P}],execute:function(){e("default",(function(){return s.jsxs("div",{className:"about_page",children:[s.jsx("h1",{children:"About Page"}),s.jsx("p",{children:"This is the About Page."})]})}))}}}));

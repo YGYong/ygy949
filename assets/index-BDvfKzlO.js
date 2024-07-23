@@ -1,0 +1,1 @@
+import{U as s,P as e}from"./index-BzG1zOYx.js";function c(){const o=s();return console.log(o),e.jsxs("div",{className:"home_page",children:[e.jsx("h1",{children:"React 18.3.1 + react-router 6.24 + Antd 5.18.3"}),e.jsx("h2",{children:"CRA + craco + TS + less + webpack"})]})}export{c as default};

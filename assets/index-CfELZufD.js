@@ -1,1 +1,0 @@
-import{P as e}from"./index-D8D1T57o.js";function t(){return e.jsxs("div",{className:"about_page",children:[e.jsx("h1",{children:"About Page"}),e.jsx("p",{children:"This is the About Page."})]})}export{t as default};
