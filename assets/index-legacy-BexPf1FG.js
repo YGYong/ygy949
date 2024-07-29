@@ -1,1 +1,0 @@
-System.register(["./index-legacy-B0CsppAN.js"],(function(e,t){"use strict";var n;return{setters:[function(e){n=e.P}],execute:function(){e("default",(function(){return n.jsx("div",{children:"ToolPage"})}))}}}));

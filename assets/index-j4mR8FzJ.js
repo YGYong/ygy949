@@ -1,0 +1,1 @@
+import{S as t}from"./index-Ddq3U9Xw.js";function c(){const e=t();return console.log(e),React.createElement("div",{className:"home_page"},React.createElement("h1",null,"React 18.3.1 + react-router 6.24 + Antd 5.18.3"),React.createElement("h2",null,"CRA + craco + TS + less + webpack"))}export{c as default};

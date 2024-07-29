@@ -1,1 +1,0 @@
-System.register(["./index-legacy-B0CsppAN.js"],(function(e,n){"use strict";var t;return{setters:[function(e){t=e.P}],execute:function(){e("default",(function(){return t.jsx("div",{children:"ConnectionPage"})}))}}}));
