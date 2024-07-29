@@ -1,1 +1,0 @@
-System.register([],(function(e,t){"use strict";return{execute:function(){e("default",(function(){return React.createElement("div",{className:"about_page"},React.createElement("h1",null,"About Page"),React.createElement("p",null,"This is the About Page."))}))}}}));
