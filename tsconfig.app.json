@@ -28,6 +28,6 @@
       "@/*": ["src/*"] // This maps all imports starting with "@" to the "src" folder
     },
   },
-  "include": ["src"],
+  "include": ["src","src/**/*.ts"],
   // "exclude": ["node_modules", "dist", "**/*.js"]
 }
