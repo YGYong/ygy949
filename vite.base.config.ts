@@ -1,13 +1,12 @@
-import react from '@vitejs/plugin-react'
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import UnoCSS from "unocss/vite";
 
 export default defineConfig({
-    resolve:{
-        alias:{
-            '@': '/src',
-        }
+  resolve: {
+    alias: {
+      "@": "/src",
     },
-    plugins:[
-        react(),
-    ]
-})
+  },
+  plugins: [react(), UnoCSS({ configFile: "./unocss.config.ts" })],
+});

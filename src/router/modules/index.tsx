@@ -1,13 +1,6 @@
 import { Navigate } from "react-router-dom";
-import { lazy } from "react";
-const Layout = lazy(() => import("@/layout"));
-const Login = lazy(() => import("@/views/login"));
-const ErrorPage = lazy(() => import("@/views/404"));
-const Home = lazy(() => import("@/views/home"));
-const LargeScreen = lazy(() => import("@/views/largeScreen"));
-const About = lazy(() => import("@/views/about"));
-const Commection = lazy(() => import("@/views/connection"));
-const Tool = lazy(() => import("@/views/tool"));
+import React from "react";
+import lazyLoad from "@/router/utils/lazyLoad";
 export const routes = [
   {
     path: "/",
@@ -15,51 +8,55 @@ export const routes = [
   },
   {
     path: "/login",
-    element: <Login></Login>,
+    element: lazyLoad(React.lazy(() => import("@/views/login"))),
   },
   {
     path: "*",
-    element: <ErrorPage></ErrorPage>,
+    element: lazyLoad(React.lazy(() => import("@/views/404"))),
   },
   {
     path: "/ygyong",
-    element: <Layout></Layout>,
+    element: lazyLoad(React.lazy(() => import("@/layout"))),
     children: [
       {
         path: "home",
-        element: <Home></Home>,
+        element: lazyLoad(React.lazy(() => import("@/views/home"))),
         meta: {
           title: "首页",
         },
       },
       {
         path: "largeScreen",
-        element: <LargeScreen></LargeScreen>,
+        element: lazyLoad(React.lazy(() => import("@/views/largeScreen"))),
         meta: {
           title: "大屏",
         },
       },
       {
         path: "about",
-        element: <About></About>,
+        element: lazyLoad(React.lazy(() => import("@/views/about"))),
         meta: {
           title: "功能",
         },
       },
       {
         path: "connection",
-        element: <Commection></Commection>,
+        element: lazyLoad(React.lazy(() => import("@/views/connection"))),
         meta: {
           title: "联系我们",
         },
       },
       {
         path: "tool",
-        element: <Tool></Tool>,
+        element: lazyLoad(React.lazy(() => import("@/views/tool"))),
         meta: {
           title: "关于",
         },
       },
     ],
+  },
+  {
+    path: "bilibili",
+    element: lazyLoad(React.lazy(() => import("@/views/bilibili"))),
   },
 ];
