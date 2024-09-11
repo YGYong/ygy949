@@ -26,6 +26,13 @@ export const routes = [
         },
       },
       {
+        path: "introduce",
+        element: lazyLoad(React.lazy(() => import("@/views/introduce"))),
+        meta: {
+          title: "React基础",
+        },
+      },
+      {
         path: "largeScreen",
         element: lazyLoad(React.lazy(() => import("@/views/largeScreen"))),
         meta: {
@@ -58,5 +65,9 @@ export const routes = [
   {
     path: "bilibili",
     element: lazyLoad(React.lazy(() => import("@/views/bilibili"))),
+  },
+  {
+    path: "three",
+    element: lazyLoad(React.lazy(() => import("@/views/three"))),
   },
 ];

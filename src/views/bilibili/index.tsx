@@ -46,7 +46,7 @@ const rightContent = [
 ];
 export default function BiliPage() {
   return (
-    <div className="relative top-0 left-0 h-[180px]">
+    <div className="relative top-0 left-0 h-[180px] min-w-[1180px]">
       <video
         className="absolute top-0 left-0 -z-1 w-[100%]"
         src={headerBg}
@@ -55,7 +55,7 @@ export default function BiliPage() {
         loop
       ></video>
       <div className="flex flex-nowrap px-2 pt-4">
-        <div className="common_banner w-[38%] mr-6">
+        <div className="common_banner w-[480px] mr-6">
           <span className="animate__animated animate__bounce animate__infinite animate-duration-1.5s text-[20px]">
             YGYong
           </span>

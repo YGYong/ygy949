@@ -8,6 +8,7 @@ import {
   DesktopOutlined,
   PhoneOutlined,
   GlobalOutlined,
+  FileDoneOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
@@ -17,17 +18,18 @@ type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
   { key: "/ygyong/home", icon: <HomeOutlined />, label: "首页" },
+  { key: "/ygyong/introduce", icon: <FileDoneOutlined />, label: "React介绍" },
   { key: "/ygyong/largeScreen", icon: <DesktopOutlined />, label: "大屏" },
   { key: "/ygyong/tool", icon: <ProfileOutlined />, label: "功能" },
   { key: "/ygyong/connection", icon: <PhoneOutlined />, label: "联系我们" },
   { key: "/ygyong/about", icon: <GlobalOutlined />, label: "关于" },
 ];
 export default function HeaderIndex() {
-  console.log(router,"111111");
-  
+  console.log(router, "111111");
+
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   // 编程式导航
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
   // 路由信息
   const { pathname } = useLocation();
   // 页面刷新时menu菜单保持高亮
