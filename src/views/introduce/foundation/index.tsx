@@ -1,5 +1,5 @@
 // 基础语法
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Col, Row } from "antd";
 // props接口定义
 interface propsInfo {
@@ -14,7 +14,17 @@ function Bpp({ onSmash }: any) {
   );
 }
 export default function FoundationPage({ propMsg }: propsInfo) {
+  console.log("组件在执行");
+
   const [isShowData, setIsShowData] = useState(true);
+  const [count, setCount] = useState(0);
+  const [position, setPosition] = useState({ x: 1, y: 2 });
+  useEffect(() => {
+    console.log("useEffect中代码在执行");
+    return () => {
+      console.log("useEffect中return代码在执行");
+    };
+  }, [isShowData]);
   // 列表渲染数据
   const list1 = [
     { name: "Tom", age: 18 },
@@ -24,12 +34,17 @@ export default function FoundationPage({ propMsg }: propsInfo) {
   const isShowDataFun = (data: string | React.MouseEvent<HTMLElement>) => {
     console.log(data);
     setIsShowData(!isShowData);
+    setPosition(() => {
+      return { ...position, y: Math.random() };
+    });
   };
   return (
     <div>
       <h1>基础语法</h1>
       <div className="p-2 border-1 border-[skyblue] border-solid">
-        <div className="text-red-500 text-[20px] font-bold">antd Row Col布局</div>
+        <div className="text-red-500 text-[20px] font-bold">
+          antd Row Col布局
+        </div>
         <Row>
           <Col span={6}>
             <h2>prop传值</h2>
@@ -52,6 +67,10 @@ export default function FoundationPage({ propMsg }: propsInfo) {
       </div>
       <div>
         <h2>响应事件(子传父)</h2>
+        <span>count:{count}</span>
+        <Button className="mx-3" size="small" type="primary" onClick={() => setCount(count + 1)}>
+          count+1
+        </Button>
         <Bpp onSmash={isShowDataFun} />
       </div>
     </div>
